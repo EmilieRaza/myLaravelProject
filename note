@@ -1,3 +1,12 @@
+
+------------------------------------------------------
+
+[/app/Http/Controllers-> controller]
+[/ressources /views -> Front]
+[/routes --> routes]
+
+------------------------------------------------------
+
 ### INSTALLER LARAVEL
     composer global require laravel/installer
     laravel new project1
@@ -32,9 +41,14 @@ php artisan make:model Post
 ### pousser la mogration dans la base de données
     php artisan migrate
 
-DB_DATABASE=bddLaravelProject
+### creation du fichier factory dans lequel les fausse données vont être ajouté
+    php artisan make:factory PostFactory --model=Post
+### completé le fichier fatory et ajouter faker
 
+### dans la base de donnée créer la table posts et ajouter tous les champs
 
-[/app/Http/Controllers-> controller]
-[/ressources /views -> Front]
-[/routes --> routes]
+### en ligne de commande taper
+    php artisan tinker
+
+### ensuite ( cette ligne va générer des fausse données et les ajouter à la bdd )
+    Post::factory()->count(5)->create()
