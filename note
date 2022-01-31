@@ -1,0 +1,40 @@
+### INSTALLER LARAVEL
+    composer global require laravel/installer
+    laravel new project1
+
+### DEMARRER LE SERVER
+    php artisan serve
+
+### AJOUTER TOUTES LES DEPENDANCE
+    npm install
+
+### installation de tailwindscss (équivalent de bootstrap)
+    npm install -d tailwindcss
+
+### installer l'extention laravel pour VScode
+    laravel extension pack
+
+### ajouter un nouveau controller
+php artisan make:controller DefaultController
+
+### ajouter un nouveau model
+php artisan make:model Post
+
+### modifier le fichier database et ajouter "innoDB" à ligne 'engine'
+    'engine' => 'InnoDB',
+
+### modifier le .env et modifier le nom de la bdd ( mettre le mettre nom de base de données dans phpmyadmin)
+    DB_DATABASE=bddLaravelProject
+
+### créer la migration
+    php artisan make:migration nomDeLaMigration
+
+### pousser la mogration dans la base de données
+    php artisan migrate
+
+DB_DATABASE=bddLaravelProject
+
+
+[/app/Http/Controllers-> controller]
+[/ressources /views -> Front]
+[/routes --> routes]

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DefaultController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Création de la route / => appel du controller
+Route::get('/', [DefaultController::class,'index'])->name('accueil');
+Route::get('/posts/{id}', [DefaultController::class,'show'])->whereNumber('id')->name('post');
+Route::get('/contact', [DefaultController::class,'contact'])->name('contact');
 
-Route::get('/', function () {
-    return view('welcome');
-});
